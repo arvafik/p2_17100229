@@ -29,20 +29,20 @@ Es una propiedad con la cual podemos manipular la manera en que mostramos objeto
 ==== Block
 Hace que el comportamiento del elemento sea el de un bloque
 
-=== Inline
+==== Inline
 El elemento se mostrará en línea con otros elementos.
 
-=== Inline-block
+==== Inline-block
 El elemento tendrá un comportamiento como el de inline y block a la vez
 
-=== None
+==== None
 Desaparece el elemento especificado con este valor.
 
-=== Box-sizing
+==== Box-sizing
 Esta propiedad nos permite incluir el Padding y Border en el total de Width y Height de un elmento. El valor predeterminado de esta propiedad es content-box, este hace que el padding y border se le sumen al tamaño total del elemento, por lo cual es recomendado utilizar el valor border-box ya que este evita esta situación, separando el padding y border de el tamaño del elemento.
 
 === ¿Cual es el concepto de flujo de documento?
-Los elementos siempre ocupara todo el ancho y alto que se le define, además de que los elementos se apilarán uno arriba del otro
+Los elementos siempre ocuparan todo el ancho y alto que se le define, además de que los elementos se apilarán uno arriba del otro
 
 === Tipos de posicionamiento
 Existen distintos tipos de posicionamiento como
@@ -78,13 +78,57 @@ Estas no estan definidas ya que estan referenciando a otros valores. Estas unida
 
 === Selectores 
 
+Son utilizados para dar estilo a elementos especificos, son los existen los selectores básicos como: universal (*)(selecciona todos los elementos de la página), etiqueta (como p) (selecciona todos los elementos que coincidan con la etiqueta), clase (.clase) (Solo da estilo a los elementos determinados con la clase definida), ID (#nombreID) (es igual que los anteriores pero esta vez con un id, utilizado para marcar elemento únicos)
 
+También existen los selectores de relación como: <espacio> (.clase .clase2) (Donde selecciona los elementos .clase2 que sean descendientes de .clase), > (.clase>.clase2)(Donde los elementos .clase2 son hijos de .clase), + (.clase~.clase2) (Donde los elementos .clase2 es el hermano adyacente de .clase), ~ (.clase~.clase2)(Seleciona todos los elementos .clase2 que preceden a .clase).
 
 === Pseudoselectores
 
+Existen pseudoclases y pseudoselectores
+
+* Pseudoclases
+
+Son utilizados para definir un estado especial de un elemento seleccionado. Por ejemplo
+
+`:hover` Utilizado para cualquier elemento donde el puntero de usuario este sobre el
+
+`:visited` Utilizado para darle estilo a los links que el usuario haya visitado anteriormente 
+
+`:link` Utilizado para darle estilos a los elementos que tengan un atributo `href` que no hayan sido visitados anteriormente por el usuario
+
+`:active` Utilizado para estilizar a un elemento que haya sido activado por el usuario, por ejemplo con un click al elemento.
+
+* Pseudoselectores
+
+Utilizados para seleccionar elementos sin tener que dar el ID o clase de ese elemento, ejemplos:
+
+`:lastchild` Utilizado para seleccionar el ultimo elemento entre un grupo de elementos hermanos
+
+`:last-of-type` Utilizado para seleccionar el ultimo elemento de su tipo 
+
+`:only-child` Utilizado para seleccionar un elemento sin hermanos
 
 === ¿Qué es la cascada?
 
+CSS analiza por orden tres conceptos para saber que estilos debe de aplicar al documento: importancia (Se determina dependiendo del tipo de las hojas de estilo como Agente de usuario, CSS de usuario y CSS de autor, ademas de el uso de `!important`), especificidad (Sigue un cálculo matemático) y su orden (CSS embebido, CSS interno y CSS externo)
 
 === ¿Qué es la especificidad?
 
+El navegador lo utiliza para decidir que valores de CSS son más notables para un elemento y estos serán aplicados.
+Se calcula utilizando un calculo matematico donde se suman los puntos que tiene un selector
+
+!important (Tiene el mayor puntaje por lo tanto se forzará su utilización)
+
+Etiqueta html (1000 puntos)
+
+ID (100 puntos)
+
+clase, pseudoclase (10 puntos)
+
+elemento, pseudoelemento (1 punto)
+
+Por ejemplo:
+
+`#nav .selected a:hover` tiene la puntuación 121 por que tiene un ID (100), una clase (10), una pseudoclase (10) y un elemento (1)
+
+Existen herramientas en internet como calculadoras para realizar este calculo.
