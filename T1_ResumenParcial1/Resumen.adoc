@@ -1,0 +1,63 @@
+= Resumen del Primer Parcial
+17100229
+
+=== ¿Qué es HTML y CSS?
+
+HTML es un lenguaje de marcado utilizado para crear páginas en la web, mientras que CSS es un lenguaje utilizado para describir la presentación de un documento tal como son los archivos de HTML
+
+=== ¿Qué es el modelo de caja?
+Es el comportamiento que CSS hace hacia todos los elementos del documento HTML, hace que estos se representen mediante cajas rectangulares las cuales se crean automáticamente al escribir una etiqueta HTML. Este tiene distintas propiedades como: content, padding, border, margin y outline
+
+==== Content
+Es donde reside el contenido real del elemento, ya sea texto, imagenes, etc.
+
+==== Padding
+Es el espacio libre que podemos definir entre el contenido y el borde
+
+==== Border
+Es una línea que rodea el padding y el content, ese puede ser cambiado de color o de grosor
+
+==== Margin
+Separacion que podemos definir entre la caja y el resto de las cajas existentes
+
+==== Outline
+Es una linea que esta rodeando a todo el elemento, incluyendo a los bordes.
+
+=== ¿Qué es la propiedad display?
+Es una propiedad con la cual podemos manipular la manera en que mostramos objetos. Este tiene distintos valores como:
+==== Block
+Hace que el comportamiento del elemento sea el de un bloque
+
+=== Inline
+El elemento se mostrará en línea con otros elementos.
+
+=== Inline-block
+El elemento tendrá un comportamiento como el de inline y block a la vez
+
+=== None
+Desaparece el elemento especificado con este valor.
+
+=== Box-sizing
+Esta propiedad nos permite incluir el Padding y Border en el total de Width y Height de un elmento. El valor predeterminado de esta propiedad es content-box, este hace que el padding y border se le sumen al tamaño total del elemento, por lo cual es recomendado utilizar el valor border-box ya que este evita esta situación, separando el padding y border de el tamaño del elemento.
+
+=== ¿Cual es el concepto de flujo de documento?
+
+
+=== Tipos de posicionamiento
+
+
+=== Unidades de medida utilizadas en CSS
+
+
+=== Selectores 
+
+
+
+=== Pseudoselectores
+
+
+=== ¿Qué es la cascada?
+
+
+=== ¿Qué es la especificidad?
+
