@@ -25,6 +25,7 @@ Es una linea que esta rodeando a todo el elemento, incluyendo a los bordes.
 
 === ¿Qué es la propiedad display?
 Es una propiedad con la cual podemos manipular la manera en que mostramos objetos. Este tiene distintos valores como:
+
 ==== Block
 Hace que el comportamiento del elemento sea el de un bloque
 
@@ -41,10 +42,14 @@ Desaparece el elemento especificado con este valor.
 Esta propiedad nos permite incluir el Padding y Border en el total de Width y Height de un elmento. El valor predeterminado de esta propiedad es content-box, este hace que el padding y border se le sumen al tamaño total del elemento, por lo cual es recomendado utilizar el valor border-box ya que este evita esta situación, separando el padding y border de el tamaño del elemento.
 
 === ¿Cual es el concepto de flujo de documento?
-
+Los elementos siempre ocupara todo el ancho y alto que se le define, además de que los elementos se apilarán uno arriba del otro
 
 === Tipos de posicionamiento
-
+Existen distintos tipos de posicionamiento como
+* Static
+* Relative
+* Absolute
+* Fixed
 
 === Unidades de medida utilizadas en CSS
 
