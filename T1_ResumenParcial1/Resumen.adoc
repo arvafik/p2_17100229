@@ -46,13 +46,35 @@ Los elementos siempre ocupara todo el ancho y alto que se le define, además de 
 
 === Tipos de posicionamiento
 Existen distintos tipos de posicionamiento como
+
 * Static
+
+Este es el valor por defecto en CSS, donde el elemento se posiciona segun el flujo normal de la página
+
 * Relative
+
+Se posiciona el elemento de manera personalizada tomando como referencia la posición static del elemento
+
 * Absolute
+
+A diferencia de los anteriores, su posición no estará dentro del flujo normal de la pagina y tomará como referencia el navegador para saber su posición
+
 * Fixed
+
+Este también esta fuera del flujo del documento, este también toma como referencia al navegador para saber su posición, sin embargo siempre mantendrá su posición aunque se le haga scroll a la pagina
+
 
 === Unidades de medida utilizadas en CSS
 
+Existen dos tipos de unidades 
+
+* Unidades absolutas
+
+Estos son unidades definidas por lo cual son poco flexibles y no se adaptan fácilmente a las diferentes pantallas, son los siguientes: in (inches), cm (centimetros), mm (milimetros), pt (puntos), pc (picas).
+
+* Unidades relativas
+
+Estas no estan definidas ya que estan referenciando a otros valores. Estas unidades son utilizadas por la flexibilidad con la que se puede adaptar los elementos a la pantalla. Estas son las siguientes unidades: em (respecto al tamaño de letra del elemento), ex (respecto a la altura de la letra 'x' del tipo de letra), px (pixel, respecto a la resolución de la pantalla del dispositivo)
 
 === Selectores 
 
