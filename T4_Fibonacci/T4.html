@@ -4,43 +4,39 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Serie Fibonacci</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"/>
     <style>
       .formulario {
         padding-right: 5%;
         padding-left: 3%;
         padding-bottom: 2%;
       }
-
     </style>
     <script>
       function Generar() {
-        var Valor1 = parseInt(document.getElementById("inicial1").value) 
-        var Valor2 = parseInt(document.getElementById("inicial2").value)
-        var VTermino = parseInt(document.getElementById("terminos").value) 
-        var ac = Valor2
-        var an = Valor1
-        var sig = 0
-        var Resul = Valor1+ " , " +Valor2
-        var i = 1
+        var Valor1 = parseInt(document.getElementById("inicial1").value);
+        var Valor2 = parseInt(document.getElementById("inicial2").value);
+        var VTermino = parseInt(document.getElementById("terminos").value);
+        var ac = Valor2;
+        var an = Valor1;
+        var sig = 0;
+        var Resul = Valor1 + " , " + Valor2;
+        var i = 1;
 
-        while(i <= VTermino){
-          sig = ac + an
-          an = ac
-          ac = sig
-          Resul = Resul + " , " + ac
-          i++
+        while (i <= VTermino) {
+          sig = ac + an;
+          an = ac;
+          ac = sig;
+          Resul = Resul + " , " + ac;
+          i++;
         }
-        document.getElementById("texto").innerHTML = Resul
+        document.getElementById("texto").innerHTML = Resul;
       }
-      function Limpiar(){
-        document.getElementById("inicial1").value = ""
-        document.getElementById("inicial2").value = ""
-        document.getElementById("terminos").value = ""
-        document.getElementById("texto").innerHTML = ""
+      function Limpiar() {
+        document.getElementById("inicial1").value = "";
+        document.getElementById("inicial2").value = "";
+        document.getElementById("terminos").value = "";
+        document.getElementById("texto").innerHTML = "";
       }
     </script>
   </head>
