@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Serie Fibonacci</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <style>
+      .formulario {
+        padding-right: 5%;
+        padding-left: 3%;
+        padding-bottom: 2%;
+      }
+      #texto{
+        padding-right: 50px;
+      }
+    </style>
+    <script>
+      function Generar() {
+        var Valor1 = parseInt(document.getElementById("inicial1").value) 
+        var Valor2 = parseInt(document.getElementById("inicial2").value)
+        var VTermino = parseInt(document.getElementById("terminos").value) 
+        var ac = Valor2
+        var an = Valor1
+        var sig = 0
+        var Resul = Valor1+ " , " +Valor2
+        var i = 1
+
+        while(i <= VTermino){
+          sig = ac + an
+          an = ac
+          ac = sig
+          Resul = Resul + " , " + ac
+          i++
+        }
+        document.getElementById("texto").innerHTML = Resul
+      }
+      function Limpiar(){
+        document.getElementById("inicial1").value = ""
+        document.getElementById("inicial2").value = ""
+        document.getElementById("terminos").value = ""
+        document.getElementById("texto").innerHTML = ""
+      }
+    </script>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Serie Fibonacci</h1>
+        <h2 class="subtitle">
+          Utilizando un While
+        </h2>
+      </div>
+    </section>
+    <div class="formulario">
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Valor inicial 1</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input
+                id="inicial1"
+                class="input"
+                type="text"
+                placeholder="Escribe aquí el valor 1"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Valor inicial 2</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input
+                id="inicial2"
+                class="input"
+                type="text"
+                placeholder="Escribe aquí el valor 2"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Cantidad de terminos</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input
+                id="terminos"
+                class="input"
+                type="text"
+                placeholder="Escribe aquí la cantidad de terminos"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <!-- Left empty for spacing -->
+        </div>
+        <div class="field-body">
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-primary" onclick="Generar()">
+                Generar
+              </button>
+            </div>
+            <div class="control">
+              <button class="button is-primary" onclick="Limpiar()">
+                Limpiar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="control">
+        <textarea id="texto" class="textarea" readonly></textarea>
+      </div>
+    </div>
+  </body>
+</html>
